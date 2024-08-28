@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/FiraCode-Regular.woff2") format("woff2"),
+       url("/fonts/FiraCode-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/FiraCode-Bold.woff2") format("woff2"),
+       url("/fonts/FiraCode-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+:root {
+  --color-primary: #ebbbff;
+  --color-secondary: #d1f1a9;
+  --color-tertiary: #fff;
+  --color-link: #ff9da4;
+  --color-link-clicked: #ffc58f;
+  --color-highlight: #003f8e;
+  --color-background: #002451;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Fira Code";
+  background-color: var(--color-background);
+}
+h1 {
+  color: var(--color-primary);
+}
+h2 {
+  color: var(--color-tertiary);
+  font-size: 1.75em;
+}
+h2 > a {
+  text-decoration: none;
+}
+p {
+  color: var(--color-secondary);
+  font-size: 1.5em;
+}
+a, a:visited {
+  color: var(--color-link);
+}
+hr {
+  border: 0;
+  border-top: 3px solid var(--color-secondary);
+  margin: 20px 0;
+}
+button {
+  all: unset;
+  color: var(--color-secondary);
+  cursor: pointer;
+  position: relative;
+}
+button:hover, 
+button:hover mark {
+  color: var(--color-tertiary);
+}
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+  z-index: 3000;
+}
+mark {
+  background-color: var(--color-highlight);
+  box-shadow: -4px 0 0 var(--color-highlight), 4px 0 0 var(--color-highlight);
+  color: var(--color-secondary);
+}
+nav {
+  text-align: end;
+  width: 25%;
+  font-size: 2em;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.main-header {
+  width: 75%;
+  text-align: end;
+  margin-top: 15vh;
+  margin-bottom: 50px;
+}
+.main-container {
+  display: flex;
+  margin-bottom: 50px;
+}
+.tab-indicator {
+  width: 20px;
+  border-bottom: 3px solid var(--color-secondary);
+  margin-left: 20px;
+  height: 3px;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+.content-container {
+  border-left: 3px solid var(--color-secondary);
+  padding-left: 12px;
+  padding-bottom: 20px;
+  width: calc(50% - 20px);
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: height 0.3s ease;
+}
+.content-container > p {
+  margin-bottom: 20px;
+}
+.content-container > h2 {
+  margin-bottom: 10px;
+}
