@@ -26,8 +26,9 @@ components and injected into the site.
 
 ## TODOs
 
-- Design and build a responsive mobile layout
-- Add a blog section (If I find I have anything worth writing about)
+- [x] Design and build a responsive mobile layout
+- [ ] Improve mobile layout (swipe between tabs, etc.)
+- [] Add a blog section (If I find I have anything worth writing about)
 
 ## Running Locally
 
@@ -41,104 +42,3 @@ the following command:
 `deno task start`
 
 Other relevant scripts can be found in `deno.json`.
-
-## Website Content for Those Who Prefer to Consume Information Through READMEs Instead of Interacting With the Lovely Website I Built
-
-If, for some reason, you'd prefer to see all my website content in one place,
-here it is in glorious markdown:
-
-### Bio
-
-I work on the front end of [PayPal login](https://paypal.com/login), and I'm
-passionate about building accessible, performant, and delightful user
-experiences.
-
-When I'm not coding, I enjoy hitting the climbing gym, getting out into the
-woods, and rolling dice with some friends.
-
-### Projects
-
-#### personal website [↗](https://github.com/Miklos24/portfolio)
-
-You're looking at it!
-
-This website was built using [Fresh](https://fresh.deno.dev), a lightweight web
-framework for [Deno](https://deno.com). It leverages
-[Preact](https://preactjs.com) for rendering UI and Markdown for content, and
-contains all the information I might want a curious visitor to know about me.
-
----
-
-#### hairbypage.com [↗](https://github.com/Miklos24/hair-by-page)
-
-I built [hairbypage.com](https://hairbypage.com) for my partner's hairdressing
-business, Hair By Page. It's built with [Next.js](https://nextjs.org) and
-[React](https://reactjs.org), and calls the
-[Instagram](https://developers.facebook.com/docs/instagram-basic-display-api/)
-and [Twilio](https://www.twilio.com/docs/messaging) APIs to display her latest
-posts and allow clients to book appointments.
-
-### Skills
-
-I specialize in building performant, testable, and scalable web applications
-with a focus on React and TypeScript.
-
----
-
-#### languages
-
-##### use on a daily basis
-
-- JavaScript (ES6+)
-- TypeScript
-- CSS/SASS
-- Python
-
-##### significant prior experience with
-
-- C++
-- Java
-- SQL
-
----
-
-#### tools and frameworks
-
-##### use on a daily basis
-
-- React
-- Redux
-- Jest
-- Cypress
-- GraphQL
-- Node.js
-- Next.js
-- Git/GitHub
-
-##### significant prior experience with
-
-- MongoDB
-- Express
-- Redis
-- Amazon S3
-- Docker
-
----
-
-#### methodologies
-
-- Agile
-- Scrum
-- Test-Driven Development
-- Continuous Integration/Continuous Deployment
-- RESTful API Design
-- Microservices Architecture
-
-### Contact
-
-Feel free to reach out to me on
-[LinkedIn](https://www.linkedin.com/in/miklosbowling) or email me at
-[miklos.bowling@gmail.com](mailto:miklos.bowling@gmail.com).
-
-I'm always interested in hearing about new opportunities or fielding any
-questions you might have. Look forward to hearing from you!

@@ -11,6 +11,17 @@ export default function TabNav({ tabNames, children }: TabNavProps) {
   const selected = useSignal(0);
   const tabButtonHeight = useSignal(0);
   const tabButtonRef = useRef<HTMLButtonElement>(null);
+  const isMobile = useSignal(globalThis.innerWidth < 768);
+
+  useEffect(() => {
+    const onResize = () => {
+      isMobile.value = globalThis.innerWidth < 768;
+    };
+    globalThis.addEventListener("resize", onResize);
+    return () => {
+      globalThis.removeEventListener("resize", onResize);
+    };
+  }, []);
 
   useEffect(() => {
     tabButtonHeight.value = tabButtonRef.current?.clientHeight ?? 0;
@@ -34,14 +45,17 @@ export default function TabNav({ tabNames, children }: TabNavProps) {
           ))}
         </ul>
       </nav>
-      <span
-        style={{
-          transform:
-            `translateY(${((0.5 + selected.value) * tabButtonHeight.value)}px)`,
-        }}
-        className="tab-indicator"
-      >
-      </span>
+      {!isMobile.value && (
+        <span
+          style={{
+            transform:
+              `translateY(${((0.5 + selected.value) *
+                tabButtonHeight.value)}px)`,
+          }}
+          className="tab-indicator"
+        >
+        </span>
+      )}
       {children[selected.value]}
     </div>
   );
