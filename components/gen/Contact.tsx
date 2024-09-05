@@ -1,4 +1,6 @@
-export default function Contact() {
+import { FunctionalComponent } from "preact";
+
+const Contact: FunctionalComponent = () => {
   return (
     <div className="content-container">
       <p>
@@ -13,4 +15,6 @@ export default function Contact() {
       </p>
     </div>
   );
-}
+};
+
+export default Contact;

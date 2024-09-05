@@ -1,4 +1,6 @@
-export default function Experience() {
+import { FunctionalComponent } from "preact";
+
+const Experience: FunctionalComponent = () => {
   return (
     <div className="content-container">
       <h2>software engineer @ PayPal (2022 - present)</h2>
@@ -16,4 +18,6 @@ export default function Experience() {
       </p>
     </div>
   );
-}
+};
+
+export default Experience;

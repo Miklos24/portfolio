@@ -1,4 +1,6 @@
-export default function Skills() {
+import { FunctionalComponent } from "preact";
+
+const Skills: FunctionalComponent = () => {
   return (
     <div className="content-container">
       <p>
@@ -53,4 +55,6 @@ export default function Skills() {
       </ul>
     </div>
   );
-}
+};
+
+export default Skills;

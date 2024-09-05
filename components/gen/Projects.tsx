@@ -1,4 +1,6 @@
-export default function Projects() {
+import { FunctionalComponent } from "preact";
+
+const Projects: FunctionalComponent = () => {
   return (
     <div className="content-container">
       <h2>
@@ -31,4 +33,6 @@ export default function Projects() {
       </p>
     </div>
   );
-}
+};
+
+export default Projects;

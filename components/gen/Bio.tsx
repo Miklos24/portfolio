@@ -1,4 +1,6 @@
-export default function Bio() {
+import { FunctionalComponent } from "preact";
+
+const Bio: FunctionalComponent = () => {
   return (
     <div className="content-container">
       <p>
@@ -13,4 +15,6 @@ export default function Bio() {
       </p>
     </div>
   );
-}
+};
+
+export default Bio;

@@ -8,7 +8,7 @@
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
-    "generate-components": "deno run --allow-read --allow-write scripts/gen_components_from_md.ts && deno fmt components/gen/*.tsx"
+    "generate-components": "deno run --allow-read --allow-write scripts/gen_components_from_md.ts && deno fmt components/gen/"
   },
   "lint": { "rules": { "tags": ["fresh", "recommended"] } },
   "exclude": ["**/_fresh/*"],
