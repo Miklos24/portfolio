@@ -24,7 +24,15 @@ export default function TabNav({ tabNames, children }: TabNavProps) {
   }, []);
 
   useEffect(() => {
-    tabButtonHeight.value = tabButtonRef.current?.clientHeight ?? 0;
+    const resizeObserver = new ResizeObserver(() => {
+      tabButtonHeight.value = tabButtonRef.current?.clientHeight ?? 0;
+    });
+    if (tabButtonRef.current) {
+      resizeObserver.observe(tabButtonRef.current);
+    }
+    return () => {
+      resizeObserver.disconnect();
+    };
   }, [tabButtonRef]);
 
   return (
@@ -48,9 +56,8 @@ export default function TabNav({ tabNames, children }: TabNavProps) {
       {!isMobile.value && (
         <span
           style={{
-            transform:
-              `translateY(${((0.5 + selected.value) *
-                tabButtonHeight.value)}px)`,
+            transform: `translateY(${((0.5 + selected.value) *
+              tabButtonHeight.value)}px)`,
           }}
           className="tab-indicator"
         >
