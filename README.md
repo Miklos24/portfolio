@@ -15,7 +15,7 @@ environment. I use VSCode with the
 colors and font used throughout the site. I also opted to go as minimal as
 possible with the design of individual elements to create that sense of a
 text-only environment. For example, the tab buttons are simply text with a hover
-effect, and I use the `<mark>` tag on the currently selected tag to emulate
+effect, and I use the `<mark>` tag on the currently selected tab to emulate
 being highlighted in a text editor.
 
 Another design choice worth mentioning is that I write all the site content in
