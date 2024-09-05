@@ -11,7 +11,7 @@ const Bio: FunctionalComponent = () => {
       </p>
       <p>
         When I&#39;m not coding, I enjoy hitting the climbing gym, getting out
-        into the woods, and rolling dice with some friends.
+        into the woods, and rolling d20s with some friends.
       </p>
     </div>
   );
