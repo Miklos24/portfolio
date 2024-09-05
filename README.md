@@ -28,7 +28,7 @@ components and injected into the site.
 
 - [x] Design and build a responsive mobile layout
 - [ ] Improve mobile layout (swipe between tabs, etc.)
-- [] Add a blog section (If I find I have anything worth writing about)
+- [ ] Add a blog section (If I find I have anything worth writing about)
 
 ## Running Locally
 
