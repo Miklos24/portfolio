@@ -110,7 +110,7 @@ nav {
   border-left: 3px solid var(--color-secondary);
   padding-left: 16px;
   padding-bottom: 20px;
-  width: calc(50% - 20px);
+  width: calc(50% - 36px);
   flex-grow: 0;
   flex-shrink: 0;
   transition: height 0.3s ease;
