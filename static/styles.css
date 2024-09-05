@@ -17,7 +17,7 @@
   --color-secondary: #d1f1a9;
   --color-tertiary: #fff;
   --color-link: #ff9da4;
-  --color-link-clicked: #ffc58f;
+  --color-list: #99ffff;
   --color-highlight: #003f8e;
   --color-background: #002451;
 }
@@ -44,9 +44,13 @@ h2 {
 h2 > a {
   text-decoration: none;
 }
+h3 {
+  color: var(--color-secondary);
+}
 p {
   color: var(--color-secondary);
   font-size: 1.5em;
+  line-height: 1.4;
 }
 a, a:visited {
   color: var(--color-link);
@@ -103,7 +107,7 @@ nav {
 }
 .content-container {
   border-left: 3px solid var(--color-secondary);
-  padding-left: 12px;
+  padding-left: 16px;
   padding-bottom: 20px;
   width: calc(50% - 20px);
   flex-grow: 0;
@@ -115,4 +119,21 @@ nav {
 }
 .content-container > h2 {
   margin-bottom: 10px;
+}
+.content-container > ul {
+  list-style-type: none;
+  margin-left: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-container > ul > li {
+  color: var(--color-list);
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-right: 2px solid var(--color-list);
+}
+.content-container > ul > li:last-child {
+  border: none;
 }
