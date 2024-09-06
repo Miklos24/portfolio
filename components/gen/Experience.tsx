@@ -3,7 +3,10 @@ import { FunctionalComponent } from "preact";
 const Experience: FunctionalComponent = () => {
   return (
     <div className="content-container">
-      <h2>software engineer @ PayPal (2022 - present)</h2>
+      <h2>software engineer @ PayPal</h2>
+      <h3>
+        <em>(2022 - present)</em>
+      </h3>
       <p>
         I work on{" "}
         <a href="https://paypal.com/login">PayPal login</a>, where I build the

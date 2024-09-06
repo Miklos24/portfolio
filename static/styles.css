@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Fira Code";
   src: url("/fonts/FiraCode-Regular.woff2") format("woff2"),
-       url("/fonts/FiraCode-Regular.woff") format("woff");
+    url("/fonts/FiraCode-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Fira Code";
   src: url("/fonts/FiraCode-Bold.woff2") format("woff2"),
-       url("/fonts/FiraCode-Bold.woff") format("woff");
+    url("/fonts/FiraCode-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -46,13 +46,16 @@ h2 > a {
 }
 h3 {
   color: var(--color-secondary);
+  font-size: 1.25em;
+  margin-bottom: 10px;
 }
 p {
   color: var(--color-secondary);
   font-size: 1.5em;
   line-height: 1.4;
 }
-a, a:visited {
+a,
+a:visited {
   color: var(--color-link);
 }
 hr {
@@ -66,7 +69,7 @@ button {
   cursor: pointer;
   position: relative;
 }
-button:hover, 
+button:hover,
 button:hover mark {
   color: var(--color-tertiary);
 }
@@ -132,7 +135,7 @@ nav {
   color: var(--color-list);
   padding-right: 10px;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-bottom: 10px;
   border-right: 2px solid var(--color-list);
 }
 .content-container > ul > li:last-child {
@@ -160,7 +163,7 @@ nav {
     margin: 15px 0;
     border-top: 2px dashed var(--color-secondary);
   }
-  button:hover, 
+  button:hover,
   button:hover mark {
     color: var(--color-secondary);
   }
@@ -193,7 +196,7 @@ nav {
     padding-right: 10px;
     margin-right: 10px;
     margin-top: 5px;
-    border-right: 2px solid var(--color-secondary)
+    border-right: 2px solid var(--color-secondary);
   }
   nav > ul > li:last-child {
     border: none;

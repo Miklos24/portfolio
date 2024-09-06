@@ -1,4 +1,6 @@
-## software engineer @ PayPal (2022 - present)
+## software engineer @ PayPal
+
+### _(2022 - present)_
 
 I work on [PayPal login](https://paypal.com/login), where I build the front end
 with [React](https://reactjs.org) and&nbsp;
