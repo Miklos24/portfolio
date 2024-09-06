@@ -7,4 +7,4 @@ with [React](https://reactjs.org) and&nbsp;
 [TypeScript](https://www.typescriptlang.org), leveraging&nbsp;
 [Next.js](https://nextjs.org) for server-side rendering. I've also had a hand in
 implementing a [GraphQL](https://graphql.org) midlayer and ensuring strong unit
-and functional test coverage.
+and end-to-end test coverage.

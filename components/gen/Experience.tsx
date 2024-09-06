@@ -17,7 +17,7 @@ const Experience: FunctionalComponent = () => {
         for server-side rendering. I&#39;ve also had a hand in implementing a
         {" "}
         <a href="https://graphql.org">GraphQL</a>{" "}
-        midlayer and ensuring strong unit and functional test coverage.
+        midlayer and ensuring strong unit and end-to-end test coverage.
       </p>
     </div>
   );
