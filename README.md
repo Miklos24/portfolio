@@ -39,6 +39,7 @@ on small personal websites? I'm not judging, I'm just curious.
 Regardless, if you'd like to run this locally, you can clone the repo and run
 the following command:
 
-`deno task start`
+`deno task dev`
 
-Other relevant scripts can be found in `deno.json`.
+To build and serve the production bundle instead, run `deno task build` followed
+by `deno task start`. Other relevant scripts can be found in `deno.json`.

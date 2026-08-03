@@ -1,13 +1,8 @@
 import { useSignal } from "@preact/signals";
 import { useEffect, useRef } from "preact/hooks";
-import { ComponentChild } from "preact";
+import tabComponents from "../components/gen/index.ts";
 
-interface TabNavProps {
-  tabNames: string[];
-  children: ComponentChild[];
-}
-
-export default function TabNav({ tabNames, children }: TabNavProps) {
+export default function TabNav() {
   const selected = useSignal(0);
   const tabButtonHeight = useSignal(0);
   const tabButtonRef = useRef<HTMLButtonElement>(null);
@@ -35,19 +30,22 @@ export default function TabNav({ tabNames, children }: TabNavProps) {
     };
   }, [tabButtonRef]);
 
+  const SelectedTab = tabComponents[selected.value].component;
+
   return (
     <div className="main-container">
       <nav>
         <ul>
-          {tabNames.map((tab, idx) => (
-            <li key={tab}>
+          {tabComponents.map(({ name }, idx) => (
+            <li key={name}>
               <button
+                type="button"
                 ref={tabButtonRef}
                 onClick={() => {
                   selected.value = idx;
                 }}
               >
-                {selected.value === idx ? <mark>{tab}</mark> : tab}
+                {selected.value === idx ? <mark>{name}</mark> : name}
               </button>
             </li>
           ))}
@@ -63,7 +61,7 @@ export default function TabNav({ tabNames, children }: TabNavProps) {
         >
         </span>
       )}
-      {children[selected.value]}
+      <SelectedTab />
     </div>
   );
 }

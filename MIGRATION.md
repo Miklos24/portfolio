@@ -5,8 +5,8 @@ the new Deno Deploy (console.deno.com) in August 2026.
 
 ## Audit (pre-migration state)
 
-- **Framework**: Fresh 1.6.8 via `deno.land/x`, manifest-based
-  (`fresh.gen.ts`), served with `start()` from `$fresh/server.ts`.
+- **Framework**: Fresh 1.6.8 via `deno.land/x`, manifest-based (`fresh.gen.ts`),
+  served with `start()` from `$fresh/server.ts`.
 - **Deps**: Preact 10.19.6 + `@preact/signals` 1.2.2 (esm.sh), `std@0.224.0`
   (URL imports), `deno.land/x/marked@1.0.2` (abandoned; dev-time markdown →
   component codegen only). No lockfile (`"lock": false`).
@@ -25,5 +25,5 @@ the new Deno Deploy (console.deno.com) in August 2026.
 2. `std` URL imports → `jsr:@std/*` latest; `marked` → `npm:marked@18`;
    Preact/signals → latest npm. Enable lockfile. Deno 2.9.x.
 3. Delete deployctl workflow; deploy via `deno deploy` CLI and/or the
-   console.deno.com GitHub integration (Fresh preset: build `vite build`,
-   serve `deno serve -A _fresh/server.js`).
+   console.deno.com GitHub integration (Fresh preset: build `vite build`, serve
+   `deno serve -A _fresh/server.js`).

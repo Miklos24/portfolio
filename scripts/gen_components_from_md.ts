@@ -1,6 +1,6 @@
-import { emptyDir, ensureDir } from "$std/fs/mod.ts";
-import { marked } from "$marked/mod.ts";
-import { basename, join } from "$std/path/mod.ts";
+import { emptyDir, ensureDir } from "@std/fs";
+import { basename, join } from "@std/path";
+import { marked } from "marked";
 
 interface IndexLabel {
   idx: number;
@@ -8,9 +8,8 @@ interface IndexLabel {
   componentName: string;
 }
 
-const renderer = new marked.Renderer();
-renderer.hr = () => "<hr />\n";
-marked.setOptions({ renderer });
+// Self-close void elements so the generated HTML is valid JSX.
+marked.use({ renderer: { hr: () => "<hr />\n" } });
 
 const contentDir = "./content/markdowns";
 const componentsDir = "./components/gen";
@@ -26,7 +25,7 @@ async function generateComponents() {
     if (file.isFile && file.name.endsWith(".md")) {
       const filePath = join(contentDir, file.name);
       const markdown = await Deno.readTextFile(filePath);
-      const html = marked(markdown);
+      const html = await marked.parse(markdown);
 
       const baseName = basename(file.name, ".md");
       const [indexPart, lowercaseName] = baseName.split("_");
