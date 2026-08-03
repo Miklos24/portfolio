@@ -7,8 +7,8 @@ mobile and backend when a project needs them.
 
 The skill I use most in 2026. Agentic coding workflows (mostly Claude Code), LLM
 evals and judges, CI guardrails for AI-written code, and prompt and caching
-standards. I set these practices up for my team at Meta and use them every day
-on Mythrun.
+standards. I was an early adopter at Meta and helped my team ramp up; most of
+these practices I've built out and refined on Mythrun.
 
 ---
 
