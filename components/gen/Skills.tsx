@@ -1,59 +1,15 @@
+// deno-lint-ignore-file react-no-danger -- trusted local markdown
 import { FunctionalComponent } from "preact";
 
 const Skills: FunctionalComponent = () => {
   return (
-    <div className="content-container">
-      <p>
-        I specialize in building performant, testable, and scalable web
-        applications with a focus on React and TypeScript.
-      </p>
-      <hr />
-      <h2>languages</h2>
-      <h3>use on a daily basis</h3>
-      <ul>
-        <li>JavaScript (ES6+)</li>
-        <li>TypeScript</li>
-        <li>CSS/SASS</li>
-        <li>Python</li>
-      </ul>
-      <h3>significant prior experience with</h3>
-      <ul>
-        <li>C++</li>
-        <li>Java</li>
-        <li>SQL</li>
-      </ul>
-      <hr />
-      <h2>tools and frameworks</h2>
-      <h3>use on a daily basis</h3>
-      <ul>
-        <li>React</li>
-        <li>Redux</li>
-        <li>Jest</li>
-        <li>Cypress</li>
-        <li>GraphQL</li>
-        <li>Node.js</li>
-        <li>Next.js</li>
-        <li>Git/GitHub</li>
-      </ul>
-      <h3>significant prior experience with</h3>
-      <ul>
-        <li>MongoDB</li>
-        <li>Express</li>
-        <li>Redis</li>
-        <li>Amazon S3</li>
-        <li>Docker</li>
-      </ul>
-      <hr />
-      <h2>methodologies</h2>
-      <ul>
-        <li>Agile</li>
-        <li>Scrum</li>
-        <li>Test-Driven Development</li>
-        <li>Continuous Integration/Continuous Deployment</li>
-        <li>RESTful API Design</li>
-        <li>Microservices Architecture</li>
-      </ul>
-    </div>
+    <div
+      className="content-container"
+      dangerouslySetInnerHTML={{
+        __html:
+          "<p>Most of my work is React and TypeScript on the web, with detours into native\nmobile and backend when a project needs them.</p>\n<hr />\n<h2>ai-assisted development</h2>\n<p>The skill I use most in 2026. Agentic coding workflows (mostly Claude Code), LLM\nevals and judges, CI guardrails for AI-written code, and prompt and caching\nstandards. I set these practices up for my team at Meta and use them every day\non Mythrun.</p>\n<hr />\n<h2>languages</h2>\n<ul>\n<li>daily: TypeScript/JavaScript</li>\n<li>recent professional: Hack/PHP, Objective-C</li>\n<li>prior experience: Python, SQL, C++, CSS/SASS</li>\n</ul>\n<hr />\n<h2>tools and frameworks</h2>\n<ul>\n<li>daily: React, Relay/GraphQL, Node.js, Next.js, Jest, Cypress, Git</li>\n<li>recent professional: ComponentKit (iOS), Fastify, Postgres, Redis, Docker,\nAWS/Terraform</li>\n</ul>",
+      }}
+    />
   );
 };
 

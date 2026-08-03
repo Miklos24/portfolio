@@ -40,11 +40,22 @@ async function generateComponents() {
         componentName,
       });
 
+      // Embed the HTML via dangerouslySetInnerHTML rather than inline JSX:
+      // JSX whitespace rules differ between the server and client compilers,
+      // which silently drops spaces at line breaks after hydration.
       const componentContent = `
+        // deno-lint-ignore-file react-no-danger -- trusted local markdown
         import { FunctionalComponent } from "preact";
 
         const ${componentName}: FunctionalComponent = () => {
-          return <div className="content-container">${html}</div>;
+          return (
+            <div
+              className="content-container"
+              dangerouslySetInnerHTML={{ __html: ${
+        JSON.stringify(html.trim())
+      } }}
+            />
+          );
         };
 
         export default ${componentName};

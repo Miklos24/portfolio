@@ -1,37 +1,15 @@
+// deno-lint-ignore-file react-no-danger -- trusted local markdown
 import { FunctionalComponent } from "preact";
 
 const Projects: FunctionalComponent = () => {
   return (
-    <div className="content-container">
-      <h2>
-        personal website <a href="https://github.com/Miklos24/portfolio">↗</a>
-      </h2>
-      <p>You&#39;re looking at it!</p>
-      <p>
-        This website was built using{" "}
-        <a href="https://fresh.deno.dev">Fresh</a>, a lightweight web framework
-        for <a href="https://deno.com">Deno</a>. It leverages&nbsp;
-        <a href="https://preactjs.com">Preact</a>{" "}
-        for rendering UI and Markdown for content, and contains all the
-        information I might want a curious visitor to know about me.
-      </p>
-      <hr />
-      <h2>
-        hairbypage.com <a href="https://github.com/Miklos24/hair-by-page">↗</a>
-      </h2>
-      <p>
-        I built <a href="https://hairbypage.com">hairbypage.com</a>{" "}
-        for my partner&#39;s hairdressing business, Hair By Page. It&#39;s built
-        with <a href="https://nextjs.org">Next.js</a> and&nbsp;
-        <a href="https://reactjs.org">React</a>, and calls the&nbsp;
-        <a href="https://developers.facebook.com/docs/instagram-basic-display-api/">
-          Instagram
-        </a>
-        &nbsp;and <a href="https://www.twilio.com/docs/messaging">Twilio</a>
-        {" "}
-        APIs to display her latest posts and allow clients to book appointments.
-      </p>
-    </div>
+    <div
+      className="content-container"
+      dangerouslySetInnerHTML={{
+        __html:
+          "<h2>mythrun — currently building</h2>\n<p>Mythrun is a multiplayer AI Dungeon Master for D&amp;D 5e. You describe a world in a\nsentence, it generates the full setting in minutes, and then you and your\nfriends play in real time while it runs the narrative, skill checks, and\ntactical combat on generated voxel battle maps.</p>\n<p>Technically, it&#39;s essentially a big AI orchestration project powered by\nAnthropic&#39;s Claude API. There are a few different models playing different\nroles: one writes the story the players actually read, a smarter one watches\nfrom behind the curtain and nudges the narrative, and small cheap ones handle\nrouting and bookkeeping. Most of my time goes into deciding what each model is\nallowed to know and do. The storyteller never sees the plot, so it can&#39;t spoil\nanything, and anything involving dice or rules happens in deterministic code.</p>\n<p>It&#39;s in closed playtesting now. If you&#39;d like a peek before launch, ask me.</p>",
+      }}
+    />
   );
 };
 

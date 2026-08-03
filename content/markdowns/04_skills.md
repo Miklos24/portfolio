@@ -1,53 +1,27 @@
-I specialize in building performant, testable, and scalable web applications
-with a focus on React and TypeScript.
+Most of my work is React and TypeScript on the web, with detours into native
+mobile and backend when a project needs them.
+
+---
+
+## ai-assisted development
+
+The skill I use most in 2026. Agentic coding workflows (mostly Claude Code), LLM
+evals and judges, CI guardrails for AI-written code, and prompt and caching
+standards. I set these practices up for my team at Meta and use them every day
+on Mythrun.
 
 ---
 
 ## languages
 
-### use on a daily basis
-
-- JavaScript (ES6+)
-- TypeScript
-- CSS/SASS
-- Python
-
-### significant prior experience with
-
-- C++
-- Java
-- SQL
+- daily: TypeScript/JavaScript
+- recent professional: Hack/PHP, Objective-C
+- prior experience: Python, SQL, C++, CSS/SASS
 
 ---
 
 ## tools and frameworks
 
-### use on a daily basis
-
-- React
-- Redux
-- Jest
-- Cypress
-- GraphQL
-- Node.js
-- Next.js
-- Git/GitHub
-
-### significant prior experience with
-
-- MongoDB
-- Express
-- Redis
-- Amazon S3
-- Docker
-
----
-
-## methodologies
-
-- Agile
-- Scrum
-- Test-Driven Development
-- Continuous Integration/Continuous Deployment
-- RESTful API Design
-- Microservices Architecture
+- daily: React, Relay/GraphQL, Node.js, Next.js, Jest, Cypress, Git
+- recent professional: ComponentKit (iOS), Fastify, Postgres, Redis, Docker,
+  AWS/Terraform

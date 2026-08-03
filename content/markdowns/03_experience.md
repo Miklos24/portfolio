@@ -1,19 +1,23 @@
 ## software engineer @ Meta
 
-### _(2025 - present)_
+### _(2025 - 2026)_
 
-I recently joined [Meta](https://www.meta.com) to build visual search
-advertising on [Facebook](https://www.facebook.com), helping users discover
-products they're interested in directly from images. I work across the product
-stack, from crafting the UI with [React](https://reactjs.org) to integrating
-with object recognition systems.
+I built ads-based shopping experiences in the Facebook app. My main project was
+a new ad format that I ran more or less solo: the UI on iOS, the server-side
+ad-fetching code, the rollout, and the analysis afterwards. It was successful,
+doubling ad revenue for the specific flow it was built for.
+
+I also spent a stretch on loading performance, redesigning how the client
+fetches ads so that long loading states dropped from about a fifth of sessions
+to 7%. Along the way I built the tools my team uses to debug sessions and wrote
+our first standards for using LLMs in product.
 
 ## software engineer @ PayPal
 
 ### _(2022 - 2025)_
 
-I worked on [PayPal login](https://paypal.com/login), where I built the front
-end with React and&nbsp; [TypeScript](https://www.typescriptlang.org),
-leveraging&nbsp; [Next.js](https://nextjs.org) for server-side rendering. I also
-had a hand in implementing a [GraphQL](https://graphql.org) midlayer and
-ensuring strong unit and end-to-end test coverage.
+I spent two and a half years on the front end of PayPal's consumer login. I
+helped rebuild it in TypeScript, React, and Next.js, worked on passkey and
+passwordless login (part of a 1% improvement in login success, which at PayPal's
+scale was worth about $80M in 2023), and looked after the embeddable login
+component other teams used to sign people in without a redirect.
