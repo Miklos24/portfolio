@@ -12,7 +12,7 @@ export default function ErrorPage({ error }: PageProps) {
           {isNotFound ? notFoundContent.title : "500 - Something Went Wrong"}
         </title>
       </Head>
-      <header className="main-header">
+      <header className="main-header error-header">
         <h1>
           {isNotFound
             ? notFoundContent.message

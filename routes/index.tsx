@@ -1,17 +1,5 @@
-import TabNav from "../islands/TabNav.tsx";
-import homeContent from "../content/home.json" with { type: "json" };
+import SitePage from "../components/SitePage.tsx";
 
 export default function Home() {
-  return (
-    <>
-      <header className="main-header">
-        <h1>
-          {homeContent.name}
-          <br />
-          <i>{homeContent.tagline}</i>
-        </h1>
-      </header>
-      <TabNav />
-    </>
-  );
+  return <SitePage tab="bio" />;
 }

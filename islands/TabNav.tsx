@@ -2,10 +2,19 @@ import { useSignal } from "@preact/signals";
 import { useEffect, useRef } from "preact/hooks";
 import tabComponents from "../components/gen/index.ts";
 
-export default function TabNav() {
-  const selected = useSignal(0);
+interface TabNavProps {
+  initialTab: string;
+}
+
+function tabIndexFromName(name: string): number {
+  const idx = tabComponents.findIndex((tab) => tab.name === name);
+  return idx === -1 ? 0 : idx;
+}
+
+export default function TabNav({ initialTab }: TabNavProps) {
+  const selected = useSignal(tabIndexFromName(initialTab));
   const tabButtonHeight = useSignal(0);
-  const tabButtonRef = useRef<HTMLButtonElement>(null);
+  const tabButtonRef = useRef<HTMLAnchorElement>(null);
   const isMobile = useSignal(globalThis.innerWidth < 768);
 
   useEffect(() => {
@@ -15,6 +24,17 @@ export default function TabNav() {
     globalThis.addEventListener("resize", onResize);
     return () => {
       globalThis.removeEventListener("resize", onResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Keep the selected tab in sync with back/forward navigation.
+    const onPopState = () => {
+      selected.value = tabIndexFromName(location.pathname.slice(1) || "bio");
+    };
+    globalThis.addEventListener("popstate", onPopState);
+    return () => {
+      globalThis.removeEventListener("popstate", onPopState);
     };
   }, []);
 
@@ -38,15 +58,19 @@ export default function TabNav() {
         <ul>
           {tabComponents.map(({ name }, idx) => (
             <li key={name}>
-              <button
-                type="button"
+              <a
+                href={`/${name}`}
                 ref={tabButtonRef}
-                onClick={() => {
+                onClick={(e) => {
+                  // Let modified clicks (new tab, etc.) fall through to the browser.
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                  e.preventDefault();
                   selected.value = idx;
+                  history.pushState(null, "", `/${name}`);
                 }}
               >
                 {selected.value === idx ? <mark>{name}</mark> : name}
-              </button>
+              </a>
             </li>
           ))}
         </ul>

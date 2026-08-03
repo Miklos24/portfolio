@@ -63,17 +63,19 @@ hr {
   border-top: 3px solid var(--color-secondary);
   margin: 20px 0;
 }
-button {
+nav a,
+nav a:visited {
   all: unset;
+  display: inline-block;
   color: var(--color-secondary);
   cursor: pointer;
   position: relative;
 }
-button:hover,
-button:hover mark {
+nav a:hover,
+nav a:hover mark {
   color: var(--color-tertiary);
 }
-button:focus-visible {
+nav a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 1px;
   z-index: 3000;
@@ -141,6 +143,13 @@ nav {
 .content-container > ul > li:last-child {
   border: none;
 }
+footer {
+  color: var(--color-secondary);
+  opacity: 0.6;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 40px 20px 20px;
+}
 @media (max-width: 768px) {
   body {
     margin-left: 20px;
@@ -163,8 +172,8 @@ nav {
     margin: 15px 0;
     border-top: 2px dashed var(--color-secondary);
   }
-  button:hover,
-  button:hover mark {
+  nav a:hover,
+  nav a:hover mark {
     color: var(--color-secondary);
   }
   .main-header {
@@ -176,6 +185,11 @@ nav {
     margin-bottom: 10px;
     position: fixed;
     background-color: var(--color-background);
+  }
+  /* The error page has no flowing content below the fixed header,
+     so keep its header in flow to avoid overlapping the footer. */
+  .error-header {
+    position: static;
   }
   nav {
     text-align: left;
