@@ -9,7 +9,7 @@ Technically, it's essentially a big AI orchestration project powered by
 Anthropic's Claude API. There are a few different models playing different
 roles: one writes the story the players actually read, a smarter one watches
 from behind the curtain and nudges the narrative, and small cheap ones handle
-routing and bookkeeping. Most of my time goes into deciding what each model is
+routing and bookkeeping. The hard part has been deciding what each model is
 allowed to know and do. The storyteller never sees the plot, so it can't spoil
 anything, and anything involving dice or rules happens in deterministic code.
 
