@@ -34,22 +34,22 @@
     "npm:@babel/core@^7.28.0": "7.29.7",
     "npm:@babel/preset-react@^7.27.1": "7.29.7_@babel+core@7.29.7",
     "npm:@opentelemetry/api@^1.9.0": "1.9.1",
-    "npm:@preact/signals@^2.10.1": "2.10.1_preact@10.29.8__preact-render-to-string@6.7.0_preact-render-to-string@6.7.0__preact@10.29.8",
-    "npm:@preact/signals@^2.5.1": "2.10.1_preact@10.29.8__preact-render-to-string@6.7.0_preact-render-to-string@6.7.0__preact@10.29.8",
-    "npm:@prefresh/vite@^2.4.8": "2.4.12_preact@10.29.8__preact-render-to-string@6.7.0_vite@7.3.6_preact-render-to-string@6.7.0__preact@10.29.8",
+    "npm:@preact/signals@^2.11.3": "2.11.3_preact@10.29.8",
+    "npm:@preact/signals@^2.5.1": "2.11.3_preact@10.29.8",
+    "npm:@prefresh/vite@^2.4.8": "2.4.12_preact@10.29.8_vite@7.3.6_preact-render-to-string@6.7.0",
     "npm:@remix-run/node-fetch-server@0.12": "0.12.0",
     "npm:@types/babel__core@^7.20.5": "7.20.5",
     "npm:esbuild-wasm@~0.25.11": "0.25.12",
     "npm:esbuild@0.25.7": "0.25.7",
     "npm:esbuild@~0.25.5": "0.25.12",
-    "npm:marked@^18.0.7": "18.0.7",
+    "npm:marked@^18.0.14": "18.0.14",
     "npm:preact-render-to-string@^6.6.3": "6.7.0_preact@10.29.8",
     "npm:preact@^10.28.2": "10.29.8_preact-render-to-string@6.7.0",
     "npm:preact@^10.29.1": "10.29.8_preact-render-to-string@6.7.0",
     "npm:preact@^10.29.8": "10.29.8_preact-render-to-string@6.7.0",
     "npm:rollup@^4.55.1": "4.62.4",
-    "npm:vite@^7.1.3": "7.3.6",
-    "npm:vite@^7.1.4": "7.3.6"
+    "npm:vite@^7.1.4": "7.3.6",
+    "npm:vite@^7.3.6": "7.3.6"
   },
   "jsr": {
     "@deno/esbuild-plugin@1.2.1": {
@@ -788,8 +788,8 @@
     "@preact/signals-core@1.14.4": {
       "integrity": "sha512-HNB6HYeYKhQbJ1aKl+YRjrS4+QWHLKX6qKoUsfS/m0vqzsVaEBiZiaKbG/e+NKk2ch5ALQr/ihWaMHxiCuuWHA=="
     },
-    "@preact/signals@2.10.1_preact@10.29.8__preact-render-to-string@6.7.0_preact-render-to-string@6.7.0__preact@10.29.8": {
-      "integrity": "sha512-fJfOJ2F6vYiZ7G8ANy/fUDQgPxurE0YS+C+g1cGHxT7b/xLBmvqChu4O2DwuwdS9ywyQ6B3ytBQba/8BJ3V+WQ==",
+    "@preact/signals@2.11.3_preact@10.29.8": {
+      "integrity": "sha512-mttwFM98G/JiriTgMwU+UWygL6sfVmYEiNcPSKkUnv4PxPpZhmP2ugGC4qi360+ZIHyQ8NY05bfJT3b4RUIGlw==",
       "dependencies": [
         "@preact/signals-core",
         "preact"
@@ -798,7 +798,7 @@
     "@prefresh/babel-plugin@0.5.3": {
       "integrity": "sha512-57LX2SHs4BX2s1IwCjNzTE2OJeEepRCNf1VTEpbNcUyHfMO68eeOWGDIt4ob9aYlW6PEWZ1SuwNikuoIXANDtQ=="
     },
-    "@prefresh/core@1.5.10_preact@10.29.8__preact-render-to-string@6.7.0_preact-render-to-string@6.7.0__preact@10.29.8": {
+    "@prefresh/core@1.5.10_preact@10.29.8_preact-render-to-string@6.7.0": {
       "integrity": "sha512-7yPTFbG56sutaFu8krp3B4a200KOFUvrtlllKWRuLjsYXo9UUucHOZRcer+gtgMkFTpv6ob8TGcTwA32bSwa1w==",
       "dependencies": [
         "preact"
@@ -807,7 +807,7 @@
     "@prefresh/utils@1.2.1": {
       "integrity": "sha512-vq/sIuN5nYfYzvyayXI4C2QkprfNaHUQ9ZX+3xLD8nL3rWyzpxOm1+K7RtMbhd+66QcaISViK7amjnheQ/4WZw=="
     },
-    "@prefresh/vite@2.4.12_preact@10.29.8__preact-render-to-string@6.7.0_vite@7.3.6_preact-render-to-string@6.7.0__preact@10.29.8": {
+    "@prefresh/vite@2.4.12_preact@10.29.8_vite@7.3.6_preact-render-to-string@6.7.0": {
       "integrity": "sha512-FY1fzXpUjiuosznMV0YM7XAOPZjB5FIdWS0W24+XnlxYkt9hNAwwsiKYn+cuTEoMtD/ZVazS5QVssBr9YhpCQA==",
       "dependencies": [
         "@babel/core",
@@ -1159,8 +1159,8 @@
         "yallist"
       ]
     },
-    "marked@18.0.7": {
-      "integrity": "sha512-iDVQ5ldaiKXn6b2JroX5kgRfmwgqolW7NpaEzTl1k/2Zh1njIEN9yniyLV/mOvWwtsE8OGgkjsCYvijuPk1dtA==",
+    "marked@18.0.14": {
+      "integrity": "sha512-mBHK6FBHuBAlhgRe88w9F0O1AbwwXJUcQibUbC/QcdTbVGAD7aWza+xt3N6oT/jCZx3/OMeS+8rnuiHZcQ9s7A==",
       "bin": true
     },
     "ms@2.1.3": {
@@ -1289,11 +1289,11 @@
       "jsr:@fresh/plugin-vite@^1.1.2",
       "jsr:@std/fs@^1.0.24",
       "jsr:@std/path@^1.1.6",
-      "npm:@preact/signals@^2.10.1",
+      "npm:@preact/signals@^2.11.3",
       "npm:@types/babel__core@^7.20.5",
-      "npm:marked@^18.0.7",
+      "npm:marked@^18.0.14",
       "npm:preact@^10.29.8",
-      "npm:vite@^7.1.3"
+      "npm:vite@^7.3.6"
     ]
   }
 }
