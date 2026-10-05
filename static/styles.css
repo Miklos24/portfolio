@@ -143,6 +143,65 @@ nav {
 .content-container > ul > li:last-child {
   border: none;
 }
+/* Inlined SVG diagrams; see content/diagrams/README.md */
+.diagram {
+  margin-bottom: 20px;
+}
+.diagram-scroll {
+  overflow-x: auto;
+}
+.diagram figcaption {
+  color: var(--color-secondary);
+  opacity: 0.75;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+.diagram svg {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+}
+.diagram text {
+  fill: var(--color-secondary);
+  font-size: 17px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+.diagram text.title {
+  font-size: 23px;
+}
+.diagram text.start {
+  text-anchor: start;
+}
+.diagram text.end {
+  text-anchor: end;
+}
+.diagram .box,
+.diagram .line {
+  fill: none;
+  stroke: var(--color-secondary);
+  stroke-width: 2;
+}
+.diagram .head {
+  fill: var(--color-secondary);
+}
+.diagram .box.accent,
+.diagram .line.accent {
+  stroke: var(--color-primary);
+}
+.diagram .head.accent,
+.diagram text.accent {
+  fill: var(--color-primary);
+}
+.diagram .box.alt,
+.diagram .line.alt {
+  stroke: var(--color-tertiary);
+}
+.diagram .head.alt,
+.diagram text.alt {
+  fill: var(--color-tertiary);
+}
 footer {
   color: var(--color-secondary);
   opacity: 0.6;

@@ -8,8 +8,45 @@ interface IndexLabel {
   componentName: string;
 }
 
-// Self-close void elements so the generated HTML is valid JSX.
-marked.use({ renderer: { hr: () => "<hr />\n" } });
+const contentRoot = "./content";
+
+function escapeAttr(value: string): string {
+  return value.replace(/&/g, "&amp;").replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;");
+}
+
+marked.use({
+  renderer: {
+    // Self-close void elements so the generated HTML is valid JSX.
+    hr: () => "<hr />\n",
+    // A paragraph holding only an image of an SVG under content/diagrams/ is
+    // inlined as a <figure>, so the diagram picks up the site's fonts and
+    // colors. The image title, if any, becomes its caption (see
+    // content/diagrams/README.md).
+    paragraph({ tokens }) {
+      const [token] = tokens;
+      if (
+        tokens.length !== 1 || token.type !== "image" ||
+        !/^diagrams\/[\w-]+\.svg$/.test(token.href)
+      ) {
+        return false;
+      }
+      const svg = Deno.readTextFileSync(join(contentRoot, token.href))
+        .replace(/<\?xml[^>]*\?>/, "")
+        .replace(/<!--[\s\S]*?-->/g, "")
+        .replace(/\n\s*/g, "")
+        .trim();
+      const labelled = svg.replace(
+        "<svg",
+        `<svg role="img" aria-label="${escapeAttr(token.text)}"`,
+      );
+      const caption = token.title
+        ? `<figcaption>${escapeAttr(token.title)}</figcaption>`
+        : "";
+      return `<figure class="diagram"><div class="diagram-scroll">${labelled}</div>${caption}</figure>\n`;
+    },
+  },
+});
 
 const contentDir = "./content/markdowns";
 const componentsDir = "./components/gen";

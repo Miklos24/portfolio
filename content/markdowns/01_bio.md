@@ -1,14 +1,22 @@
 I'm a software engineer who spent the last few years building consumer products
-at Meta and PayPal — most recently ads-based shopping experiences in the
-Facebook app, where I'd take an experiment the whole way myself: UI, native
-clients, rollout, and the analysis afterward.
+at PayPal and Meta. Most recently, I worked on everyone's favorite part of
+Facebook: ads. The product itself wasn't the most inspiring to me, but I really
+enjoyed owning my features and figuring out how to improve them through
+experimentation and data analysis.
 
-I left Meta in early 2026 because I felt AI had crossed a threshold: agentic
-coding tools had gotten good enough that pushing them as hard as I could seemed
-like the most valuable thing I could do this year, and that's hard to do
-properly inside a big company. So right now I'm building Mythrun, an AI-powered
-platform for D&D 5e, learning as much as I can about this new way of making
-software, and keeping an eye out for my next full-time thing.
+In early 2026, I left Meta to build Mythrun, an AI-powered platform for D&D 5e.
+AI coding tools had gotten good enough that it felt possible to do this as a
+solo dev, and as a longtime DM, I thought I could do better than the existing
+offerings. It was one of the most enjoyable coding experiences I've ever had,
+but even after extensive cost optimization, a two-hour session cost almost $20
+in API calls. I mothballed it in August, though I plan to open source some of
+the more interesting pieces.
 
-When I'm not coding, I enjoy hitting the climbing gym, getting out into the
-woods, and rolling d20s with some friends.
+I've also become increasingly concerned about AI alignment and safety. AI could
+do enormous good for humanity, but it could also go very wrong in some very
+scary ways, and I want to help make sure we get the good outcomes. I'm open to
+software engineering roles broadly, but AI safety is the direction I want to
+work towards.
+
+When I'm not coding (or telling Claude what to code for me), I enjoy hitting the
+climbing gym, getting out into the woods, and rolling d20s with some friends.
