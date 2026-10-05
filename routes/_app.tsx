@@ -1,7 +1,7 @@
 import { type PageProps } from "fresh";
 
 const description =
-  "Software engineer in Seattle. Previously Meta and PayPal; currently building Mythrun, an AI dungeon master for D&D 5e.";
+  "Software engineer in Seattle. Previously Meta and PayPal. Interested in AI safety.";
 
 export default function App({ Component }: PageProps) {
   return (
